@@ -17,9 +17,12 @@
     // const booleanArray: Array<boolean> = [true, false, true]
     const booleanArray: GenericType<boolean> = [true, false, true]
 
+    interface User {
+        name: string;
+        age: number
+    }
 
-
-    const user: GenericType<{ name: string, age: number }> = [
+    const user: GenericType<User> = [
         {
             name: "Humayun",
             age: 20
@@ -37,6 +40,8 @@
 
     // const mens: [string, string] = ['Mr. X', 'Mr. Y']
     const mens: GenericTuple<string, string> = ['Mr. X', 'Mr. Y']
+
+
 
     const userWithID: GenericTuple<number, { name: string, email: string }> = [1234, { name: "Humayun", email: "abc@gmail.com" }]
 
