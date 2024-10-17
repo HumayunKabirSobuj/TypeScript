@@ -2,12 +2,14 @@
     // 
 
 
-    // Function with Generics
+    // Function
 
     const createArray = (param: string): string[] => {
         return [param]
     }
 
+
+    // Function with Generics
 
     const createArrayWithGeneric = <T>(param: T): T[] => {
         return [param]
@@ -32,25 +34,26 @@
         return [param1, param2]
     }
 
-    const res1 = createArrayWithTuple<string, number>('Bangladesh',506034)
+    const res1 = createArrayWithTuple<string, number>('Bangladesh', 506034)
     // console.log(res1);
 
-    const res2=createArrayWithTuple<string, {name:string}>('Bangladesh',{name:"Humayun"})
+    const res2 = createArrayWithTuple<string, { name: string }>('Bangladesh', { name: "Humayun" })
     // console.log(res2);
 
 
-    const addCourseToStudent=<T>(student:T)=>{
-        const course ="Next Level Web Development"
+    const addCourseToStudent = <T>(student: T) => {
+        const course = "Next Level Web Development"
         return {
             ...student,
             course
         }
     }
 
-    const student1=addCourseToStudent({name:"Humayun", email:"abc@gmail.com", devType:"Junior Web Developer"});
+    const student1 = addCourseToStudent({ name: "Humayun", email: "abc@gmail.com", devType: "Junior Web Developer" });
+
     // console.log(student1);
 
-    const student2=addCourseToStudent({name:"Juyel", email:"efg@gmail.com", hasWatch:"Apple Watch"});
+    const student2 = addCourseToStudent({ name: "Juyel", email: "efg@gmail.com", hasWatch: "Apple Watch" });
 
     // console.log(student2);
 
