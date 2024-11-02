@@ -56,7 +56,7 @@
     }
 
     const teacher1 = new Teacher('Mr. Teacher', 40, 'Thakurgaon','professor')
-    // teacher1.
+    // teacher1.takeClass(20)
 
     // 
 }
