@@ -1,5 +1,5 @@
 {
-    // Access modifiers
+    // Getter and setter
 
     class BankAccount {
         public readonly id: number;
@@ -12,27 +12,38 @@
             this._balance = balance;
         }
 
-        addDeposit(amount: number) {
+        // addDeposit(amount: number) {
+        //     this._balance = this._balance + amount;
+        // }
+
+        // getBalance(){
+        //     return this._balance;
+        // }
+
+        // setter
+
+        set deposit(amount: number) {
             this._balance = this._balance + amount;
         }
 
-        getBalance(){
+        // getter
+        get balance() {
             return this._balance;
         }
-    }
- 
 
-    class StudentAccount extends BankAccount{
-        // test(){
-        //     this.
-        // }
+
     }
+
 
 
     const poorManAccount = new BankAccount(111, 'Mr. Poor', 20);
-    poorManAccount.addDeposit(30)
+    // poorManAccount.addDeposit(30)
 
-    const myBalance=poorManAccount.getBalance();
+    // const myBalance=poorManAccount.getBalance();
+
+    poorManAccount.deposit=50;
+
+    const myBalance = poorManAccount.balance;
     console.log(myBalance)
 
 
